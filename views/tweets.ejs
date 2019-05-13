@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/tweets" method="POST">
+    <input type="text" placeholder="express yourself" name="tweet"></input>
+    <button type="submit">Tweet</button>
+    <input type="hidden" name="id" value="<%= id %>"/>
+
+    <%= firstName %>
+    <%= lastName %>
+
+    <a href="/edit-profile/<%= id %>">update</a>
+
+    <form action="/logout" method="POST">
+        <button type="submit">Logout</button>
+    </form>
+
+    <a href="/profile">Profile</a>
+    <main>
+            <% if (t.length > 0) { %>
+        <div>
+            <% for (let tweet of t) { %>
+                <div>
+                    <h3><%= tweet.id %></h3>
+                    <h3><%= tweet.tweet %></h3>
+                    <p><%= new Date() %></p>
+                </div>
+            <% } %>
+        </div>
+            <% } else { %>
+                <h3>No Tweets!</h3>
+            <% } %>   
+        </main>
+    </form>
+    <a href="/tweets/<%= id %>/?page=1">1</a>
+    <a href="/tweets/<%= id %>/?<%= currentPage %>=2"><%= currentPage %></a>
+</body>
+</html>

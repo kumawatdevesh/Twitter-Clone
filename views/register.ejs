@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./includes/navigation.ejs') %>
+    <div class="error">
+    <% if(errorMessage) { %>
+    <div><%= errorMessage %></div>
+    <% } %>
+    </div>
+    <form action="/register" method="POST">
+        <label for="name">name</label>
+        <input type="text" name="name"/>
+        <label for="lastname">lastname</label>
+        <input type="text" name="lastname"/>
+        <label for="email">email</label>
+        <input type="email" name="email"/>
+        <label for="password">password</label>
+        <input type="password" name="password" id="password"/>
+        <label for="confirm password">confrirm password</label>
+        <input type="password" name="confirm_password" id="confirm_password"/>
+        <button type="submit">Register</button>
+    </form>
+    
+    <a href="/reset">Reset</a>
+</body>
+</html>

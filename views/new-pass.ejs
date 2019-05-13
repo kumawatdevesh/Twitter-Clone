@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    </div>
+    <form method="POST" action="/new-password" novalidate>
+        
+        <label for="password">Password</label>
+        <input type="password" name="password"/>
+        <input type="hidden" value="<%= userId %>" name="userId">
+        <input type="hidden" value="<%= passwordToken %>" name="passwordToken">
+
+        <button type="submit">update</button>
+    </form>
+    </main>
+    
+</body>
+</html>

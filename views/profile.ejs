@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Your Account</h2>
+
+    <h1><%= user.id %></h1>
+    <h3><%= firstName %></h3>
+    <h3><%= lastName %></h3>
+    <p><%= tweets %></p>
+
+    <form action="/profile" method="POST">
+        <input type="hidden" value="<%= id %>" name="id"/>
+    </form>
+    
+</body>
+</html>

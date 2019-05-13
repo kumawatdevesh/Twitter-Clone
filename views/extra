@@ -1,0 +1,2 @@
+<% if(editMode) { %> /edit-profile <% } else { %> /profile <% } %>
+https://www.youtube.com/watch?v=fc4TnO3FNNc
